@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import Home from '../Home';
 import { ThemeContext } from '../Provider/ThemeProvider';
 import Header from './Header';
@@ -7,9 +6,8 @@ import Title from '../Title';
 import ScrollableImage from '../ScrollableImage';
 
 const Main = () => {
-    const { theme } = useContext(ThemeContext);
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto overflow-hidden'>
             <Header></Header>
             <Home></Home>
             <Title title={"Skills"}></Title>

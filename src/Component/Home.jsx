@@ -14,10 +14,10 @@ const Home = () => {
     return (
         <div>
             <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500" className="flex flex-col md:flex-row sm:flex-col">
-                <div className="w-1/2 ms-24 mt-48">
+                <div className="w-1/2 ms-24 lg:ms-24 sm:ms-2 mt-48">
                     <h1 className={`text-3xl font-bold text-black ${ theme === 'dark' ? 'text-white' : ''}`}>I am <span className="text-6xl font-bold text-red-600">Sifatulla</span></h1>
-                    <h1 className={`text-6xl font-bold text-black ${ theme === 'dark' ? 'text-white' : ''}`}>A  {' '}
-                        <span className="text-6xl h-48 font bold text-[#DAA520]">
+                    <h1 className={`text-3xl font-bold text-black ${ theme === 'dark' ? 'text-white' : ''}`}>A  {' '}
+                        <span className="text-3xl h-48 font bold text-[#DAA520]">
                             <Typewriter
                                 words={['Web Developer', 'Frontend Developer', 'MERN Stack Developer']}
                                 loop={false}
@@ -36,8 +36,8 @@ const Home = () => {
                         
                     </div>
                 </div>
-                <div className="w-1/2">
-                    <div className="w-[500px] w-[300px] sm:w-[300px] lg:w-[500px]">
+                <div className="w-1/2 mx-auto">
+                    <div className="w-[270px] sm:w-[270px] lg:w-[500px]">
                         <Lottie animationData={programming} loop={true}></Lottie>
                     </div>
 
