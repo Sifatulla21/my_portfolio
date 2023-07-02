@@ -1,28 +1,22 @@
-// import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
-// export const ThemeContext = createContext();
+export const ThemeContext = createContext();
 
-// export const ThemeProvider = ({ children }) => {
-//   const [isDarkMode, setIsDarkMode] = useState(false);
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
 
-//   useEffect(() => {
-//     const currentTheme = localStorage.getItem('theme');
-//     setIsDarkMode(currentTheme === 'dark');
-//   }, []);
+  useEffect(() => {
+    // Update the body's background color based on the theme value
+    document.body.style.backgroundColor = theme === 'light' ? '#ffffff' : '#000000';
+  }, [theme]);
 
-//   const toggleTheme = () => {
-//     const newTheme = isDarkMode ? 'light' : 'dark';
-//     setIsDarkMode(!isDarkMode);
-//     localStorage.setItem('theme', newTheme);
-//     document.documentElement.classList.toggle('dark');
-//   };
-//   const themeInfo = {
-//     isDarkMode,
-//     toggleTheme
-// }
-//   return (
-//     <ThemeContext.Provider value={themeInfo}>
-//       {children}
-//     </ThemeContext.Provider>
-//   );
-// };
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};

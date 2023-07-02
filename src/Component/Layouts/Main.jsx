@@ -1,11 +1,12 @@
+import { useContext } from 'react';
 import Home from '../Home';
+import { ThemeContext } from '../Provider/ThemeProvider';
 import Header from './Header';
-import ParticleBg from '../ParticleBg/ParticleBg';
 
 const Main = () => {
+    const { theme } = useContext(ThemeContext);
     return (
-        <div className="container mx-auto">
-            <ParticleBg></ParticleBg>
+        <div className='container mx-auto'>
             <Header></Header>
             <Home></Home>
         </div>

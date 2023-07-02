@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-import Theme from '../Theme/Theme';
+import { ThemeContext } from '../Provider/ThemeProvider';
+import ToggleButton from '../Theme/ToggleButton';
 
 const Header = () => {
+    
+  const { theme } = useContext(ThemeContext);
     return (
         <> 
-            <div className="navbar z-10 bg-opacity-80 text-black mb-4 font-bold">
+            <div className={`navbar z-10 bg-opacity-80 text-black mb-4 font-bold ${ theme === 'dark' ? 'text-white' : ''}`}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -16,6 +19,7 @@ const Header = () => {
                             <li><Link to="/">Home </Link></li>
                             <li><Link to="/instructors">Instructors</Link></li>
                             <li><Link to="/classes">Classes</Link></li>
+                            <ToggleButton></ToggleButton>
                         </ul>
                     </div>
                     <Link><img className="h-18 w-24 ml-12" src={logo} alt="" /></Link>
@@ -24,8 +28,8 @@ const Header = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to="/">Home </Link></li>
                         <li><Link to="/instructors">Instructors</Link></li>
-                        <li><Link to="/classes">Classes</Link></li> 
-                        <Theme></Theme>
+                        <li><Link to="/classes">Classes</Link></li>
+                        <ToggleButton></ToggleButton>
                     </ul>
                 </div>
             </div>
