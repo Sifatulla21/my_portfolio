@@ -26,7 +26,7 @@ const Skills = () => {
     }, []);
 
   return (
-    <div id="skills" className="container mx-auto py-8 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-0 gap-y-8">
+    <div id="skills" className="ms-2 container mx-auto py-8 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-0 gap-y-8">
       <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"className="h-48 w-48 border p-4 custom-box mx-auto sm:mx-0">
         <img className="zoom-box" src={html} alt="" />
       </div>

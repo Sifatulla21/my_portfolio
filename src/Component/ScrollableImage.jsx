@@ -11,21 +11,11 @@ const ScrollableImage = () => {
         
         Swal.fire({
             title: 'Sports School',
-            html: '<div style="max-height: 500px; overflow-y: auto;">' +
-                    '<h4><b>Registration & Login System:</b></h4>' +
-                    '<p>Users can easily create an account and log in using their email and password. Additionally, social login options are available for convenient access.</p>' +
-                    '<h4><b>Homepage:</b></h4>' +
-                    '<p>The homepage showcases a captivating top slider section, providing relevant information, messages, and visuals. It also highlights popular classes based on student engagement.</p>' +
-                    '<h4><b>Student Dashboard:</b></h4>' +
-                    '<p>Accessible only to students, the private dashboard provides a personalized space. It showcases selected classes and enrolled classes after payment. Students can easily manage their selections, including the ability to delete or pay for selected classes.</p>' +
-                    '<h4><b>Payment:</b></h4>' +
-                    '<p>Students can make secure payments for selected classes through integrated payment gateways. Upon successful payment, the available seats for the class are updated, and the class is enrolled in the "My Enrolled Classes" section.</p>' +
-                    '<h4><b>Payment History:</b></h4>' +
-                    '<p>Students have access to a payment history page that displays their previous payments. The history is sorted in descending order, with the most recent payment appearing at the top.</p>' +
-                    '<h4><b>Instructor Dashboard:</b></h4>' +
-                    '<p>Designed exclusively for instructors, the private dashboard offers powerful tools for managing classes. Instructors can add new classes, view their existing classes, monitor pending/approved/denied statuses, track the total number of enrolled students, and receive feedback. They can also update class details when necessary.</p>' +
-                    '<h4><b>Admin Dashboard:</b></h4>' +
-                    '<p>Admins have access to a dedicated dashboard for efficiently managing the platform. The dashboard allows admins to handle classes, including approval, denial, and feedback provision to instructors. Additionally, admins can manage users, assign roles, and promote users to instructor or admin status.</p>' +
+            html: '<div style="overflow-y: auto;">' +
+                    '<h1><b>Easy email/password login.</b></h1>' +
+                    '<h1><b> Student Dashboard for class management (selection, deletion, payment).</b></h1>' +
+                    '<h1><b> Instructor Dashboard with class tools (add, view, update).</b></h1>' +
+                    '<h1><b>Admin Dashboard for class approval/feedback, user management/roles.</b></h1>' +
                   '</div>',
             showCloseButton: true,
             showConfirmButton: false,
