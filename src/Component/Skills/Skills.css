@@ -8,3 +8,13 @@
   .zoom-box:hover {
     transform: scale(1.1);
   }
+  .maindiv {
+    position: relative;
+  }
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+  }
+
+  

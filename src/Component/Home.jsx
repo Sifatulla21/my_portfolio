@@ -17,7 +17,7 @@ const Home = () => {
                 <div className="w-1/2 ms-24 mt-48">
                     <h1 className={`text-3xl font-bold text-black ${ theme === 'dark' ? 'text-white' : ''}`}>I am <span className="text-6xl font-bold text-red-600">Sifatulla</span></h1>
                     <h1 className={`text-6xl font-bold text-black ${ theme === 'dark' ? 'text-white' : ''}`}>A  {' '}
-                        <span className="text-6xl font bold text-[#DAA520]">
+                        <span className="text-6xl h-48 font bold text-[#DAA520]">
                             <Typewriter
                                 words={['Web Developer', 'Frontend Developer', 'MERN Stack Developer']}
                                 loop={false}
