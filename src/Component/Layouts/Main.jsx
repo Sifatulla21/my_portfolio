@@ -5,6 +5,7 @@ import Skills from '../Skills/Skills';
 import Title from '../Title';
 import ScrollableImage from '../ScrollableImage';
 import AboutMe from '../AboutMe';
+import Contact from '../Contact/Contact';
 
 const Main = () => {
     return (
@@ -17,6 +18,8 @@ const Main = () => {
             <Skills></Skills>
             <Title title={"Projects"}></Title>
             <ScrollableImage></ScrollableImage>
+            <Title title={"Contact"}></Title>
+            <Contact></Contact>
 
         </div>
     );

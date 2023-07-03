@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import scrollimg from '../assets/scrollable.png'
 import scrollimg2 from '../assets/scrollable2.png'
 import scrollimg3 from '../assets/scrollable3.png'
 import { FaExternalLinkAlt, FaCode, FaServer, FaLink } from "react-icons/fa";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ScrollableImage = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
     const handleP1 = () =>{
-        
         Swal.fire({
             title: 'Sports School',
             html: '<div style="overflow-y: auto;">' +
@@ -49,7 +53,7 @@ const ScrollableImage = () => {
   return (
     <div className="mb-12  ms-12 sm:ms-12 lg:ms-2 grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* Card 1 */}
-      <div
+      <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
         className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
         onMouseEnter={() => handleCardHover(0, true)}
         onMouseLeave={() => handleCardHover(0, false)}
@@ -79,7 +83,7 @@ const ScrollableImage = () => {
       </div>
 
       {/* Card 2 */}
-      <div
+      <div data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
         className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
         onMouseEnter={() => handleCardHover(1, true)}
         onMouseLeave={() => handleCardHover(1, false)}
@@ -112,7 +116,7 @@ const ScrollableImage = () => {
       </div>
 
       {/* Card 3 */}
-      <div
+      <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
         className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden custom-box"
         onMouseEnter={() => handleCardHover(2, true)}
         onMouseLeave={() => handleCardHover(2, false)}
