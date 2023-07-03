@@ -1,6 +1,6 @@
 import Lottie from 'lottie-react';
 import { useContext, useEffect } from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaPaperPlane } from 'react-icons/fa';
 import contactus from '../../assets/contactus.json';
 import { ThemeContext } from '../Provider/ThemeProvider';
 import AOS from 'aos';
@@ -15,7 +15,7 @@ const ContactForm = () => {
         <div>
             <div className="my-12 mx-4 flex flex-col-reverse md:flex-row sm:flex-col-reverse">
                 <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="card-body border custom-box">
-                    <h1 className="text-3xl font-semibold my-8" >I appreciate any kind of suggestions or feedback.</h1>
+                    <h1 className={`text-3xl font-semibold my-8 ${theme === 'dark' ? 'text-white' : 'text-black'}`} >I appreciate any kind of suggestions or feedback.</h1>
                     <div className="flex flex-col md:flex-row sm:flex-col">
                         <div className="w-full md:w-1/2 sm:w-full lg:w-1/2 me-4 form-control">
                             <label className="label">
@@ -39,8 +39,8 @@ const ContactForm = () => {
                     <div className="form-control w-[200px]">
                         <button className="mt-8 custom-box btn bg-[#DAA520] hover:bg-[#DAA520] font-bold text-lg">
                             <span className="flex items-center">
-                                Send Message
-                                <FaExternalLinkAlt className="ml-2"></FaExternalLinkAlt>
+                                Send
+                                <FaPaperPlane className="ml-2"></FaPaperPlane>
                             </span>
                         </button>
                     </div>
