@@ -50,12 +50,10 @@ const ScrollableImage = () => {
     <div className="mb-12  ms-12 sm:ms-12 lg:ms-2 grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* Card 1 */}
       <div
-        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[500px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
+        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
         onMouseEnter={() => handleCardHover(0, true)}
         onMouseLeave={() => handleCardHover(0, false)}
-      >
-        <h2 className="text-lg font-semibold mb-2">Card 1</h2>
-        <div className="h-64 overflow-hidden">
+      ><div className="h-[400px] custom-box overflow-hidden">
           <animated.img
             src={scrollimg}
             alt="Image"
@@ -63,17 +61,18 @@ const ScrollableImage = () => {
             style={scrollAnimation}
           />
         </div>
-        <div className="mt-[130px] text-3xl text-xl lg:text-3xl sm:text-xl mt-4 flex justify-center space-x-4">
-          <button className="bg-red-500 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg"> <a target="_blank" href="https://github.com/Sifatulla21/portfolio"><FaCode></FaCode></a>
+        <h1 className="text-3xl font-bold mt-8">Sports School</h1>
+        <div className="mt-[150px] text-3xl text-xl lg:text-3xl sm:text-xl mt-4 flex justify-center space-x-4">
+          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg"> <a target="_blank" href="https://github.com/Sifatulla21/portfolio"><FaCode></FaCode></a>
             
           </button>
-          <button className="bg-[#DAA520] hover:bg-red-500 text-white px-4 py-2 rounded-lg"><a target="_blank" href="https://github.com/Sifatulla21/portfolio">
+          <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg"><a target="_blank" href="https://github.com/Sifatulla21/portfolio">
             <FaServer></FaServer></a>
           </button>
-          <button className="bg-[#DAA520] hover:bg-red-500 text-white px-4 py-2 rounded-lg"><a target="_blank" href="https://sports-school-71cd4.web.app/">
+          <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg"><a target="_blank" href="https://sports-school-71cd4.web.app/">
             <FaLink></FaLink></a>
           </button>
-          <button onClick={handleP1} className="bg-red-500 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
+          <button onClick={handleP1} className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
             <FaExternalLinkAlt></FaExternalLinkAlt>
           </button>
         </div>
@@ -81,12 +80,11 @@ const ScrollableImage = () => {
 
       {/* Card 2 */}
       <div
-        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[500px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
+        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
         onMouseEnter={() => handleCardHover(1, true)}
         onMouseLeave={() => handleCardHover(1, false)}
       >
-        <h2 className="text-lg font-semibold mb-2">Card 2</h2>
-        <div className="h-64 overflow-hidden">
+        <div className="h-[400px] custom-box2 overflow-hidden">
           <animated.img
             src={scrollimg2}
             alt="Image"
@@ -94,19 +92,20 @@ const ScrollableImage = () => {
             style={scrollAnimation2}
           />
         </div>
-        <div className="mt-[130px] text-3xl text-xl lg:text-3xl sm:text-xl mt-4 flex justify-center space-x-4">
-          <button className="bg-red-500 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg"> <a target="_blank" href="https://github.com/Sifatulla21/First-Assignment"><FaCode></FaCode></a>
+        <h1 className="text-3xl font-bold mt-8">Toy Palace</h1>
+        <div className="mt-[150px] text-3xl text-xl lg:text-3xl sm:text-xl mt-4 flex justify-center space-x-4">
+          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg"> <a target="_blank" href="https://github.com/Sifatulla21/First-Assignment"><FaCode></FaCode></a>
             
           </button>
-          <button className="bg-[#DAA520] hover:bg-red-500 text-white px-4 py-2 rounded-lg">
+          <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
           <a target="_blank" href="https://github.com/Sifatulla21/First-Assignment"><FaServer></FaServer></a>
             
           </button>
-          <button className="bg-[#DAA520] hover:bg-red-500 text-white px-4 py-2 rounded-lg">
+          <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
           <a target="_blank" href="https://toy-place-80456.web.app/"><FaLink></FaLink></a>
             
           </button>
-          <button className="bg-red-500 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
+          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
             <FaExternalLinkAlt></FaExternalLinkAlt>
           </button>
         </div>
@@ -114,12 +113,11 @@ const ScrollableImage = () => {
 
       {/* Card 3 */}
       <div
-        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[500px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
+        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden custom-box"
         onMouseEnter={() => handleCardHover(2, true)}
         onMouseLeave={() => handleCardHover(2, false)}
       >
-        <h2 className="text-lg font-semibold mb-2">Card 3</h2>
-        <div className="h-64 overflow-hidden">
+        <div className="h-[400px] custom-box overflow-hidden">
           <animated.img
             src={scrollimg3}
             alt="Image"
@@ -127,19 +125,20 @@ const ScrollableImage = () => {
             style={scrollAnimation3}
           />
         </div>
-        <div className="mt-[130px] text-3xl text-xl lg:text-3xl sm:text-xl mt-4 flex justify-center space-x-4">
-          <button className="bg-red-500 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
+        <h1 className="text-3xl font-bold mt-8">Chefs Zone</h1>
+        <div className="mt-[150px] text-3xl text-xl lg:text-3xl sm:text-xl mt-4 flex justify-center space-x-4">
+          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
               <a target="_blank" href="https://github.com/Sifatulla21/Quran"><FaCode></FaCode></a>
             
           </button>
-          <button className="bg-[#DAA520] hover:bg-red-500 text-white px-4 py-2 rounded-lg">
+          <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
           <a target="_blank" href="https://github.com/Sifatulla21/Quran"><FaServer></FaServer></a>
             
           </button>
-          <button className="bg-[#DAA520] hover:bg-red-500 text-white px-4 py-2 rounded-lg">
+          <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
           <a target="_blank" href="https://chefs-zone-e0bbb.web.app/"><FaLink></FaLink></a>
           </button>
-          <button className="bg-red-500 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
+          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
             <FaExternalLinkAlt></FaExternalLinkAlt>
           </button>
         </div>

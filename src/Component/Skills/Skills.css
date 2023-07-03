@@ -1,20 +1,22 @@
 .custom-box {
-    box-shadow: 0 0 10px 0 red;
+  box-shadow:
+     5px 5px 5px rgba(248, 3, 3, 0.274), 
+     5px 5px 5px #daa52055, 
+     5px 5px 5px rgba(255, 0, 0, 0.315);
   }
+.custom-box2 {
+  box-shadow:
+     5px 5px 5px #daa52055, 
+     5px 5px 5px rgba(248, 3, 3, 0.274), 
+     5px 5px 5px #daa52055;
+  }
+
   .zoom-box {
     transition: transform 0.3s;
   }
   
   .zoom-box:hover {
     transform: scale(1.1);
-  }
-  .maindiv {
-    position: relative;
-  }
-  
-  .wave {
-    position: absolute;
-    bottom: 0;
   }
 
   
