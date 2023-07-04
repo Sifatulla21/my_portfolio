@@ -34,7 +34,7 @@ const Home = () => {
                         <button className="mt-8 mr-4 custom-box btn bg-[#DAA520] hover:bg-[#DAA520] font-bold text-lg">
                             <a href="Front_End_Developer_Resume_Sifatulla.pdf" download>
                                 <span className="flex items-center">
-                                    Download
+                                    Resume
                                      <FaDownload className="text-xl ml-2"></FaDownload>
                                 </span>
                             </a>

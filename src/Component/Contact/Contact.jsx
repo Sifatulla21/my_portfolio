@@ -3,7 +3,7 @@ import ContactInfo from "./ContactInfo";
 
 const Contact = () => {
     return (
-        <div>
+        <div id="contact">
             <ContactInfo></ContactInfo>
             <ContactForm></ContactForm>
         </div>

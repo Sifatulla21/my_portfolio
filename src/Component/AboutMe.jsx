@@ -5,22 +5,22 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useContext, useEffect } from 'react';
 import { ThemeContext } from './Provider/ThemeProvider';
-import { FaDownload, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaDownload, FaExternalLinkAlt, FaFacebookSquare, FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 const AboutMe = () => {
     useEffect(() => {
         AOS.init();
     }, []);
     const { theme } = useContext(ThemeContext);
     return (
-        <div>
+        <div id="about">
             <div className="flex flex-col md:flex-row sm:flex-col">
-                <div  data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="w-1/2 mx-auto">
+                <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="w-1/2 mx-auto mt-24">
                     <div className="w-[270px] sm:w-[270px] lg:w-[500px]">
                         <Lottie animationData={programming} loop={true}></Lottie>
                     </div>
 
                 </div>
-                <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="w-1/2ms-8 lg:ms-24 sm:ms-8 px-2 mt-48">
+                <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="w-1/2ms-8 lg:ms-24 sm:ms-8 px-2 mt-24">
                     <h1 className={`text-xl font-bold text-black ${theme === 'dark' ? 'text-white' : ''}`}>Hello, I'm  <span className="text-xl font-bold text-red-600"><Typewriter
                         words={['Sifatulla']}
                         loop={false}
@@ -47,12 +47,23 @@ const AboutMe = () => {
                             <h1 className={`mb-4 border-b-4  text-center text-xl border-black ${theme === 'dark' ? 'border-white text-white' : ''}`}><b>Email :</b> sifat2109@gmail.com</h1>
                         </div>
                     </div>
+                    <div className="flex my-8">
+                        <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-full mr-4"> <a target="_blank" href="https://www.facebook.com/sifat.ulla.7509/"><FaFacebookSquare className="text-3xl"></FaFacebookSquare></a>
+
+                        </button>
+                        <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-full mr-4"><a target="_blank" href="https://www.linkedin.com/in/sifat-ulla-177b96278/">
+                            <FaLinkedin className="text-3xl"></FaLinkedin></a>
+                        </button>
+                        <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-full"><a target="_blank" href="https://github.com/Sifatulla21">
+                            <FaGithubSquare className="text-3xl"></FaGithubSquare></a>
+                        </button>
+                    </div>
                     <div className="flex">
                         <button className="mt-8 mr-4 custom-box btn bg-[#DAA520] hover:bg-[#DAA520] font-bold text-lg">
                             <a href="Front_End_Developer_Resume_Sifatulla.pdf" download>
                                 <span className="flex items-center">
-                                    Download
-                                     <FaDownload className="text-xl ml-2"></FaDownload>
+                                    Resume
+                                    <FaDownload className="text-xl ml-2"></FaDownload>
                                 </span>
                             </a>
                         </button>

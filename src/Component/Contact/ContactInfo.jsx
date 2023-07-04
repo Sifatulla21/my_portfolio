@@ -12,7 +12,7 @@ const ContactInfo = () => {
     }, []);
     const { theme } = useContext(ThemeContext);
     return (
-        <div className="flex flex-col md:flex-row sm:flex-col justify-center sm:flex-cols  mb-12 ms-12">
+        <div className="flex flex-col lg:flex-row sm:flex-col justify-center sm:flex-cols  mb-12 ms-12">
             <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="p-4  mx-20">
                 <div className="w-1/2 mx-auto w-[80px] sm:w-[80px] lg:w-[100px]">
                     <img src={phone} alt="" />

@@ -18,18 +18,20 @@ import figma from '../../assets/figma.png';
 import './Skills.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from '../Provider/ThemeProvider';
 
 const Skills = () => {
   useEffect(() => {
-      AOS.init();
-    }, []);
-
+    AOS.init();
+  }, []);
+  const { theme } = useContext(ThemeContext);
   return (
-    <div id="skills" className="ms-2 container mx-auto py-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-0 gap-y-8">
-      <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={html} alt="" />
-      </div>
+    <div id="skills" className="ms-2 md:ms-8 container mx-auto py-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 gap-y-8">
+        <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
+          <img className="zoom-box" src={html} alt="" />
+        </div>
+
       <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
         <img className="zoom-box" src={css} alt="" />
       </div>
@@ -53,7 +55,7 @@ const Skills = () => {
       </div>
       <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
         <img className="zoom-box" src={mongodb} alt="" />
-      </div> 
+      </div>
       <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
         <img className="zoom-box" src={router} alt="" />
       </div>

@@ -1,14 +1,14 @@
 .custom-box {
   box-shadow:
-     5px 5px 5px rgba(248, 3, 3, 0.274), 
-     5px 5px 5px #daa52055, 
-     5px 5px 5px rgba(255, 0, 0, 0.315);
+     5px 5px 5px rgba(248, 3, 3, 0.424), 
+     5px 5px 5px #daa520a6, 
+     5px 5px 5px rgba(255, 0, 0, 0.404);
   }
 .custom-box2 {
   box-shadow:
-     5px 5px 5px #daa52055, 
-     5px 5px 5px rgba(248, 3, 3, 0.274), 
-     5px 5px 5px #daa52055;
+     5px 5px 5px #daa52078, 
+     5px 5px 5px rgba(248, 3, 3, 0.562), 
+     5px 5px 5px #daa52081;
   }
 
   .zoom-box {

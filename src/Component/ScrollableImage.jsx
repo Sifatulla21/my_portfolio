@@ -6,7 +6,7 @@ import scrollimg3 from '../assets/scrollable3.png'
 import { FaExternalLinkAlt, FaCode, FaServer, FaLink } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+import 'aos/dist/aos.css'; 
 
 const ScrollableImage = () => {
   useEffect(() => {
@@ -23,9 +23,36 @@ const ScrollableImage = () => {
                   '</div>',
             showCloseButton: true,
             showConfirmButton: false,
-          });
-          
-          
+          });      
+    }
+    const handleP2 = () =>{
+        Swal.fire({
+            title: 'Toy Palace',
+            html: '<div style="overflow-y: auto;">' +
+                    '<h1><b>On this site we can see a lot of toy.</b></h1>' +
+                    '<h1><b>We can see all the toys by category.</b></h1>' +
+                    '<h1><b> There is a gallery section on home page.</b></h1>' +
+                    '<h1><b>We can login with email password and google also.</b></h1>' +
+                    '<h1><b>We can add toy(CREATE).</b></h1>' +
+                    '<h1><b>We can edit and delete toy(UPDATE and DELETE).</b></h1>' +
+                    '<h1><b>We can see all the users added toy(READ)'  +
+                  '</div>',
+            showCloseButton: true,
+            showConfirmButton: false,
+          });      
+    }
+    const handleP3 = () =>{
+        Swal.fire({
+            title: 'Chefs Zone',
+            html: '<div style="overflow-y: auto;">' +
+                    '<h1><b>On this site we can see a specific countries chef.</b></h1>' +
+                    '<h1><b>We can see all the chefs details and their reciepes.</b></h1>' +
+                    '<h1><b>There is a blog page where we can make the pdf of that page and dwonload that pdf.</b></h1>' +
+                    '<h1><b>We can login with email password,  google, and git hub.</b></h1>' +
+                  '</div>',
+            showCloseButton: true,
+            showConfirmButton: false,
+          });      
     }
   const [hovered, setHovered] = useState([false, false, false]);
 
@@ -51,7 +78,7 @@ const ScrollableImage = () => {
   });
 
   return (
-    <div className="mb-12  ms-12 sm:ms-12 lg:ms-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div id="projects" className="mb-12  ms-12 sm:ms-12 lg:ms-2 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-4">
       {/* Card 1 */}
       <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
         className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
@@ -59,7 +86,7 @@ const ScrollableImage = () => {
         onMouseLeave={() => handleCardHover(0, false)}
       ><div className="h-[400px] custom-box overflow-hidden">
           <animated.img
-            src={scrollimg}
+            src={scrollimg2}
             alt="Image"
             className="w-full"
             style={scrollAnimation}
@@ -90,7 +117,7 @@ const ScrollableImage = () => {
       >
         <div className="h-[400px] custom-box2 overflow-hidden">
           <animated.img
-            src={scrollimg2}
+            src={scrollimg}
             alt="Image"
             className="w-full"
             style={scrollAnimation2}
@@ -109,7 +136,7 @@ const ScrollableImage = () => {
           <a target="_blank" href="https://toy-place-80456.web.app/"><FaLink></FaLink></a>
             
           </button>
-          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
+          <button onClick={handleP2} className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
             <FaExternalLinkAlt></FaExternalLinkAlt>
           </button>
         </div>
@@ -117,7 +144,7 @@ const ScrollableImage = () => {
 
       {/* Card 3 */}
       <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
-        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden custom-box"
+        className="relative w-[280px] lg:w-[500px] sm:w-[280px] h-[700px] bg-white rounded-lg shadow-lg p-4 overflow-hidden"
         onMouseEnter={() => handleCardHover(2, true)}
         onMouseLeave={() => handleCardHover(2, false)}
       >
@@ -142,7 +169,7 @@ const ScrollableImage = () => {
           <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
           <a target="_blank" href="https://chefs-zone-e0bbb.web.app/"><FaLink></FaLink></a>
           </button>
-          <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
+          <button onClick={handleP3} className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
             <FaExternalLinkAlt></FaExternalLinkAlt>
           </button>
         </div>
