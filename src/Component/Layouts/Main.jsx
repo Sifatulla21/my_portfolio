@@ -7,14 +7,12 @@ import ScrollableImage from '../ScrollableImage';
 import AboutMe from '../AboutMe';
 import Contact from '../Contact/Contact';
 import Bottom from '../Bottom';
-import ParticleBg from '../ParticleBg/ParticleBg';
 
 const Main = () => {
     return (
         <div>
             <div className='container mx-auto overflow-hidden'>
                 <Header></Header>
-                {/* <ParticleBg></ParticleBg> */}
                 <Home></Home>
                 <Title title={"About Me"}></Title>
                 <AboutMe></AboutMe>
