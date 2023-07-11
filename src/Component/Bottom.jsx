@@ -10,7 +10,7 @@ const Bottom = () => {
         <div>
             <div className="fixed bottom-20 right-4 mt-4 mb-2">
                 <ReactWhatsapp number="+8801959631391" message="Hello Sifat." className="">
-                    <div className="w-[50px] sm:w-[50px] lg:w-[100px]">
+                    <div className="w-[70px] sm:w-[70px] lg:w-[100px]">
                         <Lottie animationData={whatsapp} loop={true}></Lottie>
                     </div>
                 </ReactWhatsapp>

@@ -1,3 +1,9 @@
+import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from '../Provider/ThemeProvider';
+
 import reactbg from '../../assets/react.png';
 import bootstrap from '../../assets/bootstrap.png';
 import tailwind from '../../assets/tailwind.png';
@@ -15,71 +21,57 @@ import vercel from '../../assets/vercel.png';
 import netlify from '../../assets/netlify.png';
 import firebase from '../../assets/firebase.png';
 import figma from '../../assets/figma.png';
+import github from '../../assets/github.png';
+import npm from '../../assets/npm.png';
 import './Skills.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useContext, useEffect } from 'react';
-import { ThemeContext } from '../Provider/ThemeProvider';
 
 const Skills = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   const { theme } = useContext(ThemeContext);
+
+  const skillsData = [
+    { name: 'HTML', image: html },
+    { name: 'CSS', image: css },
+    { name: 'Botstrap', image: bootstrap },
+    { name: 'Tailwind', image: tailwind },
+    { name: 'Java Script', image: js },
+    { name: 'React JS', image: reactbg },
+    { name: 'Node JS', image: node },
+    { name: 'Express JS', image: express },
+    { name: 'MongoDB', image: mongodb },
+    { name: 'React Router', image: router },
+    { name: 'Axios', image: axios },
+    { name: 'JWT', image: jwt },
+    { name: 'Node Package Manager', image: npm },
+    { name: 'Firebase', image: firebase },
+    { name: 'Vercel', image: vercel },
+    { name: 'Netlify', image: netlify },
+    { name: 'VS Code', image: vs },
+    { name: 'Git Hub', image: github },
+    { name: 'Figma', image: figma },
+  ];
+
   return (
     <div id="skills" className="ms-2 md:ms-8 container mx-auto py-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 gap-y-8">
-        <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-          <img className="zoom-box" src={html} alt="" />
-        </div>
+      {skillsData.map((skill, index) => (
+        <div
+          key={index}
+          data-aos="fade-down-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+          className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0"
+        >
+          <div className="photo-item">
+            <img className="zoom-box" src={skill.image} alt={skill.name} />
+            <div className="caption">{skill.name}</div>
+          </div>
 
-      <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={css} alt="" />
-      </div>
-      <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={bootstrap} alt="" />
-      </div>
-      <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={tailwind} alt="" />
-      </div>
-      <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={js} alt="" />
-      </div>
-      <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={reactbg} alt="" />
-      </div>
-      <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={node} alt="" />
-      </div>
-      <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={express} alt="" />
-      </div>
-      <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={mongodb} alt="" />
-      </div>
-      <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={router} alt="" />
-      </div>
-      <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={axios} alt="" />
-      </div>
-      <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={jwt} alt="" />
-      </div>
-      <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={firebase} alt="" />
-      </div>
-      <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={vercel} alt="" />
-      </div>
-      <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border p-4 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={netlify} alt="" />
-      </div>
-      <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border pt-12 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={vs} alt="" />
-      </div>
-      <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="h-32 w-32 sm:w-32 lg:w-48 sm:h-32 lg:h-48 border pt-12 custom-box mx-auto sm:mx-0">
-        <img className="zoom-box" src={figma} alt="" />
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
