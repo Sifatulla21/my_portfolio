@@ -17,9 +17,9 @@ const Projects = () => {
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 640) {
-        setSlidesPerView(1); 
-      } else if (window.innerWidth < 1024) {
         setSlidesPerView(2);
+      } else if (window.innerWidth < 1024) {
+        setSlidesPerView(3);
       } else {
         setSlidesPerView(3);
       }
@@ -71,7 +71,7 @@ const Projects = () => {
     });
   }
   return (
-    <div>
+    <div id="projects">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -92,8 +92,8 @@ const Projects = () => {
         initialSlide={1}
       >
         <SwiperSlide>
-          <div className="card w-[300px] sm:w-[300px] md:w-[400px]
- lg:w-[500px] bg-base-100 border shadow-2xl ml-8 sm:ml-8 md:ml-2 lg:ml-2">
+          <div className="card w-[230px] sm:w-[230px] md:w-[300px]
+ lg:w-[500px] bg-base-100 border shadow-2xl ml-8 sm:ml-8 md:ml-0 lg:ml-0">
             <div class="container mt-4 p-4">
               <div class="content">
                 <div class="screen custom-box">
@@ -104,28 +104,21 @@ const Projects = () => {
             </div>
             <div className="card-body">
               <h1 className="text-3xl font-bold mt-8">Toy Palace</h1>
-              <div className="text-3xl text-xl lg:text-3xl sm:text-xl mt-12 flex justify-center space-x-4">
-                <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg"> <a target="_blank" href="https://github.com/Sifatulla21/First-Assignment"><FaCode></FaCode></a>
-
-                </button>
+              <div className="text-xs lg:text-3xl sm:text-xs mt-12 flex justify-center space-x-4">
                 <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
-                  <a target="_blank" href="https://github.com/Sifatulla21/First-Assignment"><FaServer></FaServer></a>
-
-                </button>
-                <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
-                  <a target="_blank" href="https://toy-place-80456.web.app/"><FaLink></FaLink></a>
+                  <a target="_blank" href="https://toy-place-80456.web.app/">Live Site</a>
 
                 </button>
                 <button onClick={handleP2} className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
-                  <FaExternalLinkAlt></FaExternalLinkAlt>
+                  Details
                 </button>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card w-[300px] sm:w-[300px] md:w-[400px]
- lg:w-[500px] bg-base-100 border shadow-2xl ml-8 sm:ml-8 md:ml-2 lg:ml-2">
+          <div className="card w-[230px] sm:w-[230px] md:w-[300px]
+ lg:w-[500px] bg-base-100 border shadow-2xl ml-8 sm:ml-8 md:ml-0 lg:ml-2">
             <div class="container mt-4 p-4">
               <div class="content">
                 <div class="screen custom-box">
@@ -135,27 +128,21 @@ const Projects = () => {
               </div>
             </div>
             <div className="card-body">
-              <h1 className="text-3xl font-bold">Sports School</h1>
-              <div className="text-3xl text-xl lg:text-3xl sm:text-xl mt-12 flex justify-center space-x-4">
-                <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg"> <a target="_blank" href="https://github.com/Sifatulla21/portfolio"><FaCode></FaCode></a>
-
-                </button>
-                <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg"><a target="_blank" href="https://github.com/Sifatulla21/portfolio">
-                  <FaServer></FaServer></a>
-                </button>
+              <h1 className="text-3xl font-bold mt-8">Sports School</h1>
+              <div className="text-xs lg:text-3xl sm:text-xs mt-12 flex justify-center space-x-4">
                 <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg"><a target="_blank" href="https://sports-school-71cd4.web.app/">
-                  <FaLink></FaLink></a>
+                  Live Site</a>
                 </button>
                 <button onClick={handleP1} className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
-                  <FaExternalLinkAlt></FaExternalLinkAlt>
+                  Details
                 </button>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card w-[300px] sm:w-[300px] md:w-[400px]
- lg:w-[500px] bg-base-100 border shadow-xl ml-8 sm:ml-8 md:ml-2 lg:ml-2">
+          <div className="card w-[230px] sm:w-[230px] md:w-[300px]
+ lg:w-[500px] bg-base-100 border shadow-xl ml-8 sm:ml-8 md:ml-20 lg:ml-2">
             <div class="container mt-4 p-4">
               <div class="content">
                 <div class="screen custom-box">
@@ -166,20 +153,12 @@ const Projects = () => {
             </div>
             <div className="card-body">
               <h1 className="text-3xl font-bold mt-8">Chefs Zone</h1>
-              <div className="text-3xl text-xl lg:text-3xl sm:text-xl mt-12 flex justify-center space-x-4">
-                <button className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
-                  <a target="_blank" href="https://github.com/Sifatulla21/Quran"><FaCode></FaCode></a>
-
-                </button>
+              <div className="text-xs lg:text-3xl sm:text-xs mt-12 flex justify-center space-x-4">
                 <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
-                  <a target="_blank" href="https://github.com/Sifatulla21/Quran"><FaServer></FaServer></a>
-
-                </button>
-                <button className="bg-[#DAA520] custom-box hover:bg-red-500 text-white px-4 py-2 rounded-lg">
-                  <a target="_blank" href="https://chefs-zone-e0bbb.web.app/"><FaLink></FaLink></a>
+                  <a target="_blank" href="https://chefs-zone-e0bbb.web.app/">Live Site</a>
                 </button>
                 <button onClick={handleP3} className="bg-red-500 custom-box2 hover:bg-[#DAA520] text-white px-4 py-2 rounded-lg">
-                  <FaExternalLinkAlt></FaExternalLinkAlt>
+                  Details
                 </button>
               </div>
             </div>
