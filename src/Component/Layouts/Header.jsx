@@ -8,7 +8,7 @@ const Header = () => {
     const { theme } = useContext(ThemeContext);
     return (
         <>
-            <div className={`navbar fixed z-10 bg-opacity-20 text-black font-bold text-3xl ${theme === 'dark' ? 'text-white' : ''}`}>
+            <div className={`navbar z-10 bg-opacity-20 text-black font-bold text-3xl ${theme === 'dark' ? 'text-white' : ''}`}>
                 <div className="navbar-start">
                     {/* <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -7,6 +7,7 @@ import ScrollableImage from '../ScrollableImage';
 import AboutMe from '../AboutMe';
 import Contact from '../Contact/Contact';
 import Bottom from '../Bottom';
+import Projects from '../Projects/Projects';
 
 const Main = () => {
     return (
@@ -19,7 +20,7 @@ const Main = () => {
                 <Title title={"Skills"}></Title>
                 <Skills></Skills>
                 <Title title={"Projects"}></Title>
-                <ScrollableImage></ScrollableImage>
+                <Projects></Projects>
                 <Title title={"Contact"}></Title>
                 <div className="mb-24">
                     <Contact></Contact>

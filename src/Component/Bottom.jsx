@@ -8,14 +8,14 @@ import whatsapp from '../assets/whatsapp.json';
 const Bottom = () => {
     return (
         <div>
-            <div className="fixed bottom-20 right-4 mt-4 mb-2">
+            <div className="fixed z-50 bottom-20 right-4 mt-4 mb-2">
                 <ReactWhatsapp number="+8801959631391" message="Hello Sifat." className="">
                     <div className="w-[70px] sm:w-[70px] lg:w-[100px]">
                         <Lottie animationData={whatsapp} loop={true}></Lottie>
                     </div>
                 </ReactWhatsapp>
             </div>
-            <div className="btm-nav m-4 bg-[#DAA520] custom-box w-1/2 w-full sm:w-full md:w-full lg:w-1/2 mx-auto rounded-full">
+            <div className="btm-nav fixed flex justify-between items-center bg-[#DAA520] custom-box w-1/2 w-full sm:w-full md:w-full lg:w-1/2 mx-auto rounded-full z-50 mb-4">
                 <a href="#about" className="text-sm lg:text-xl md:text-2xl sm:text-sm font-bold">
                     <span className="btm-nav-label">About</span>
                 </a>
